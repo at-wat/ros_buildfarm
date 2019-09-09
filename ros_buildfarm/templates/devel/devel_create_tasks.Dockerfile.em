@@ -7,6 +7,8 @@
     arch=arch,
 ))@
 
+RUN sed -e 's|http://archive\.ubuntu\.com|http://us-east-1.ec2.archive.ubuntu.com|' -i /etc/apt/sources.list
+
 VOLUME ["/var/cache/apt/archives"]
 
 ENV DEBIAN_FRONTEND noninteractive
